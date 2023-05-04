@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "dev-portfolio-24c70"
+  },
+  "targets": {
+    "dev-portfolio-24c70": {
+      "hosting": {
+        "csclub": [
+          "csclub"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
