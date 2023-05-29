@@ -1,11 +1,11 @@
-import "./Resources.modules.css";
+import styles from "./Resources.module.css";
 
 const Resources = () => {
 	return (
-		<div className="container">
+		<div className={styles.container}>
 			<h1>Resources</h1>
-			<div className="resources">
-				<div className="resource">
+			<div className={styles.resources}>
+				<div className={styles.resource}>
 					<a href="https://refer.me" target="_blank" rel="noreferrer">
 						<img
 							src="https://s3.amazonaws.com/refer.me/site/logos/logo.png"
@@ -21,7 +21,7 @@ const Resources = () => {
 						</div>
 					</a>
 				</div>
-				<div className="resource">
+				<div className={styles.resource}>
 					<a href="https://leetcode.com" target="_blank" rel="noreferrer">
 						<img
 							src="https://assets.leetcode.com/static_assets/public/webpack_bundles/images/LeetCode_nav.4d940ca72.png"
@@ -36,7 +36,7 @@ const Resources = () => {
 						</div>
 					</a>
 				</div>
-				<div className="resource">
+				<div className={styles.resource}>
 					<a href="https://education.github.com/pack" target="_blank" rel="noreferrer">
 						<img src="/GitHub-Mark.png" alt="GitHub Education Pack"></img>
 						<div>
@@ -44,6 +44,39 @@ const Resources = () => {
 							<ul>
 								<li>Free access to premium developer tools and services</li>
 								<li>Learn new skills with hands-on tutorials</li>
+							</ul>
+						</div>
+					</a>
+				</div>
+				<div className={styles.resource}>
+					<a href="https://www.glassdoor.com" target="_blank" rel="noreferrer">
+						<img
+							src="https://logos-world.net/wp-content/uploads/2021/08/Glassdoor-Logo.png"
+							alt="Glassdoor"
+						></img>
+						<div>
+							<h2>Glassdoor</h2>
+							<ul>
+								<li>Get insights about companies, salaries, and interviews</li>
+								<li>Discover new job opportunities</li>
+							</ul>
+						</div>
+					</a>
+				</div>
+				<div className={styles.resource}>
+					<a href="https://www.levels.fyi" target="_blank" rel="noreferrer">
+						<img
+							src="https://www.levels.fyi/assets/logo/full_grey/full_logo.svg"
+							alt="Levels.fyi"
+						></img>
+						<div>
+							<h2>Levels.fyi</h2>
+							<ul>
+								<li>
+									Search 300k+ salaries for different companies, job titles,
+									career levels, and locations
+								</li>
+								<li>Explore tools to help you get paid more</li>
 							</ul>
 						</div>
 					</a>

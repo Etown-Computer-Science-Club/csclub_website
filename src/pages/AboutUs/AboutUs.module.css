@@ -1,0 +1,64 @@
+.container {
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card {
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+p {
+    font-size: 1.2em;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.officers {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.officers th {
+    border-bottom: 2px solid #f0f0f0;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #f0f0f0;
+    text-transform: uppercase;
+}
+
+.officers td {
+    padding: 10px;
+    font-size: 1.1em;
+    color: #f0f0f0;
+}
+
+.email {
+    text-align: center;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: #2c87c5;
+    margin: 0 10px;
+}

@@ -1,0 +1,30 @@
+/* NavBar.module.css */
+.navBar {
+    background-color: #1c1c1c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navTitle {
+    color: #f0f0f0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+    color: #2c87c5;
+}
