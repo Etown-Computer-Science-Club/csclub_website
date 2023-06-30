@@ -12,13 +12,10 @@ const theme = extendTheme({
 		initialColorMode: "dark",
 		useSystemColorMode: false,
 	},
-	colors: {
-		brand: {
-			light: "gray.200", // this will be the light background color
-			dark: "gray.900", // this will be the dark background color
-		},
-	},
 });
+
+if (localStorage.getItem("chakra-ui-color-mode") === "light")
+	localStorage.removeItem("chakra-ui-color-mode");
 
 function App() {
 	return (
