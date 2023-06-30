@@ -8,6 +8,10 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer";
 
 const theme = extendTheme({
+	config: {
+		initialColorMode: "dark",
+		useSystemColorMode: false,
+	},
 	colors: {
 		brand: {
 			light: "gray.200", // this will be the light background color
