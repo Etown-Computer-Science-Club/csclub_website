@@ -1,22 +1,26 @@
-// NavBar.jsx
-import styles from "./NavBar.module.css";
+import { Box, Heading, Flex, Image, useMediaQuery } from "@chakra-ui/react";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 
 const NavBar = () => {
+	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+
 	return (
-		<nav className={styles.navBar}>
-			<h1 className={styles.navTitle}>CS Club</h1>
-			<ul className={styles.navLinks}>
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/about">About Us</a>
-				</li>
-				<li>
-					<a href="/resources">Resources</a>
-				</li>
-			</ul>
-		</nav>
+		<Box bg="blue.900" px={4} color="white">
+			<Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+				<Flex align={"center"}>
+					<Image
+						src="CS_CLUB_LOGO.png"
+						alt="CS Club Logo"
+						boxSize="50px"
+						mr={3}
+						objectFit="cover"
+					/>
+					<Heading>CS Club</Heading>
+				</Flex>
+				{isLargerThan768 ? <DesktopNav /> : <MobileNav />}
+			</Flex>
+		</Box>
 	);
 };
 
