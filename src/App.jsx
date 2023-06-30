@@ -1,11 +1,12 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 import Resources from "./pages/Resources";
 import AboutUs from "./pages/AboutUs";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer";
+import Events from "./pages/Events";
 
 const theme = extendTheme({
 	config: {
@@ -21,15 +22,18 @@ function App() {
 	return (
 		<ChakraProvider theme={theme}>
 			<Router>
-				<NavBar />
-				<Box p={5} maxW="container.xl" mx="auto">
-					<Routes>
-						<Route path="/" element={<Resources />} />
-						<Route path="/resources" element={<Resources />} />
-						<Route path="/about" element={<AboutUs />} />
-					</Routes>
-				</Box>
-				<Footer />
+				<Flex direction="column" minHeight="100vh">
+					<NavBar />
+					<Box width="100%" padding={10} flex={1} maxW="container.xl" mx="auto">
+						<Routes>
+							<Route path="/" element={<Events />} />
+							<Route path="/resources" element={<Resources />} />
+							<Route path="/about" element={<AboutUs />} />
+							<Route path="/events" element={<Events />} />
+						</Routes>
+					</Box>
+					<Footer />
+				</Flex>
 			</Router>
 		</ChakraProvider>
 	);

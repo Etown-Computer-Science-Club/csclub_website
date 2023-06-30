@@ -2,6 +2,13 @@ import { Box, Heading, Flex, Image, useMediaQuery } from "@chakra-ui/react";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
+const navItems = [
+	{ title: "Home", link: "/" },
+	{ title: "Events", link: "/events" },
+	{ title: "About Us", link: "/about" },
+	{ title: "Resources", link: "/resources" },
+];
+
 const NavBar = () => {
 	const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
 
@@ -18,7 +25,11 @@ const NavBar = () => {
 					/>
 					<Heading>CS Club</Heading>
 				</Flex>
-				{isLargerThan768 ? <DesktopNav /> : <MobileNav />}
+				{isLargerThan768 ? (
+					<DesktopNav navItems={navItems} />
+				) : (
+					<MobileNav navItems={navItems} />
+				)}
 			</Flex>
 		</Box>
 	);

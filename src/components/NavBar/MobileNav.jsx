@@ -9,10 +9,11 @@ import {
 	VStack,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import PropTypes from "prop-types";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useState, useRef } from "react";
 
-const MobileNav = () => {
+const MobileNav = ({ navItems }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const onClose = () => setIsOpen(false);
 	const btnRef = useRef();
@@ -37,15 +38,17 @@ const MobileNav = () => {
 						<DrawerCloseButton />
 						<DrawerBody>
 							<VStack p={0}>
-								<Link as={RouterLink} to="/" onClick={onClose}>
-									Home
-								</Link>
-								<Link as={RouterLink} to="/about" onClick={onClose}>
-									About Us
-								</Link>
-								<Link as={RouterLink} to="/resources" onClick={onClose}>
-									Resources
-								</Link>
+								{navItems.map((item) => (
+									<Link
+										as={RouterLink}
+										to={item.link}
+										mr={5}
+										key={item.link}
+										onClick={onClose}
+									>
+										{item.title}
+									</Link>
+								))}
 							</VStack>
 						</DrawerBody>
 					</DrawerContent>
@@ -53,6 +56,10 @@ const MobileNav = () => {
 			</Drawer>
 		</>
 	);
+};
+
+MobileNav.propTypes = {
+	navItems: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default MobileNav;

@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const AboutUs = () => {
 	return (
-		<Box p={5}>
+		<>
 			<Heading mb={5}>About Us</Heading>
 			<Box mb={5}>
 				<Text>
@@ -64,7 +64,7 @@ const AboutUs = () => {
 					</Link>
 				</Box>
 			</Box>
-		</Box>
+		</>
 	);
 };
 
