@@ -8,28 +8,34 @@ function date(dateString) {
 
 const events = [
 	{
-		name: "Hackathon 2023",
-		description: "An event to showcase your coding skills.",
-		startDate: date("2023-06-16 18:00"),
-		endDate: date("2023-06-18 10:00"),
-		location: "New York",
-		link: "https://hackathon.com",
-	},
-	{
-		name: "Workshop on Python",
-		description: "Learn Python with experts from the industry.",
-		startDate: date("2023-05-28 13:00"),
-		endDate: date("2023-05-28 14:00"),
+		name: "Interest Meeting 01",
+		description: "Join us for our upcoming interest meetings! The Computer Science Club is excited to announce that we will be hosting multiple meetings each week, each with a different focus. We want to find the best times for our potential members, so we're offering several options. Come and learn more about what our club has to offer and how you can get involved. We hope to see you there!",
+		startDate: date("2023-08-28 19:00"),
+		endDate: date("2023-08-28 20:00"),
 		location: "E281",
 	},
 	{
-		name: "Workshop on React",
-		description: "Learn React with experts from the industry.",
-		startDate: date("2023-07-28 13:00"),
-		endDate: date("2023-07-28 14:00"),
+		name: "Interest Meeting 02",
+		description: "Join us for our upcoming interest meetings! The Computer Science Club is excited to announce that we will be hosting multiple meetings each week, each with a different focus. We want to find the best times for our potential members, so we're offering several options. Come and learn more about what our club has to offer and how you can get involved. We hope to see you there!",
+		startDate: date("2023-08-29 19:00"),
+		endDate: date("2023-08-29 20:00"),
 		location: "E281",
 	},
-].sort((a, b) => b.startDate - a.startDate);
+	{
+		name: "Interest Meeting 03",
+		description: "Join us for our upcoming interest meetings! The Computer Science Club is excited to announce that we will be hosting multiple meetings each week, each with a different focus. We want to find the best times for our potential members, so we're offering several options. Come and learn more about what our club has to offer and how you can get involved. We hope to see you there!",
+		startDate: date("2023-08-30 19:00"),
+		endDate: date("2023-08-30 20:00"),
+		location: "E281",
+	},
+	{
+		name: "Interest Meeting 04",
+		description: "Join us for our upcoming interest meetings! The Computer Science Club is excited to announce that we will be hosting multiple meetings each week, each with a different focus. We want to find the best times for our potential members, so we're offering several options. Come and learn more about what our club has to offer and how you can get involved. We hope to see you there!",
+		startDate: date("2023-08-31 19:00"),
+		endDate: date("2023-08-31 20:00"),
+		location: "E281",
+	},
+].sort((a, b) => a.startDate - b.startDate);
 
 const Events = () => {
 	// Get the current date in EST timezone
