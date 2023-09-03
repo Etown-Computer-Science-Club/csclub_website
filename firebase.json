@@ -1,7 +1,7 @@
 {
   "hosting": {
     "target": "csclub",
-    "public": "dist",
+    "public": "client/dist",
     "ignore": [
       "firebase.json",
       "**/.*",
