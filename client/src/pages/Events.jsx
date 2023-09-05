@@ -40,19 +40,19 @@ const events = [
     location: 'E281',
   },
   {
-		name: "First Official Club Meeting",
-		description: "Join us for our upcoming meeting! The Computer Science Club is excited to kick off the year with our first meeting of the 2023/2024 academic year. At this meeting, we will guide you through setting up the CS Club website on your local machine. We hope to see you there!",
-		startDate: date("2023-09-05 19:00"),
-		endDate: date("2023-09-05 20:00"),
-		location: "E281",
-	},
-	{
-		name: "Git & GitHub Workshop",
-		description: "Join us for our upcoming workshop! Learn the basics of contributing to Git repositories hosted on GitHub. A functional understanding of Git and GitHub will be extremely important for your future projects and career. We hope to see you there!",
-		startDate: date("2023-09-07 19:00"),
-		endDate: date("2023-09-07 20:00"),
-		location: "E281",
-	},
+    name: 'First Official Club Meeting',
+    description: 'Join us for our upcoming meeting! The Computer Science Club is excited to kick off the year with our first meeting of the 2023/2024 academic year. At this meeting, we will guide you through setting up the CS Club website on your local machine. We hope to see you there!',
+    startDate: date('2023-09-05 19:00'),
+    endDate: date('2023-09-05 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Git & GitHub Workshop',
+    description: 'Join us for our upcoming workshop! Learn the basics of contributing to Git repositories hosted on GitHub. A functional understanding of Git and GitHub will be extremely important for your future projects and career. We hope to see you there!',
+    startDate: date('2023-09-07 19:00'),
+    endDate: date('2023-09-07 20:00'),
+    location: 'E281',
+  },
 ].sort((a, b) => a.startDate - b.startDate);
 
 function Events() {
