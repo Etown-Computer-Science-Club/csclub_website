@@ -56,8 +56,8 @@ const events = [
   {
     name: 'Happy FunTimes Coding Session',
     description: 'Join us for our upcoming Happy FunTimes Coding Session! Learn the basics of the Happy FunTimes Coding Sessions. A functional understanding of Happy FunTimes Coding Sessions will be extremely important for your future projects and career. We hope to see you there!',
-    startDate: date('2023-09-07 19:00'),
-    endDate: date('2023-09-07 20:00'),
+    startDate: date('2023-16-07 19:00'),
+    endDate: date('2023-16-07 20:00'),
     location: 'E281',
   },
 ].sort((a, b) => a.startDate - b.startDate);
