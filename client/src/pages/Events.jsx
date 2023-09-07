@@ -53,6 +53,10 @@ const events = [
     endDate: date('2023-09-07 20:00'),
     location: 'E281',
   },
+  {
+    name: 'Free Money Workshop',
+    description: 'Come get free money! We will be giving away free money to all attendees. We hope to see you there!',
+  }
 ].sort((a, b) => a.startDate - b.startDate);
 
 function Events() {
