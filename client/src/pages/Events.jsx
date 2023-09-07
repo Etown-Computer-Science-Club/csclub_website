@@ -53,6 +53,12 @@ const events = [
     endDate: date('2023-09-07 20:00'),
     location: 'E281',
   },
+  {
+    name: 'CS Club Birthday',
+    description: 'Join us for CS Club birthday'
+    endDate: date('2023-09-12 20:00'),
+    location: 'E281',
+  },
 ].sort((a, b) => a.startDate - b.startDate);
 
 function Events() {
