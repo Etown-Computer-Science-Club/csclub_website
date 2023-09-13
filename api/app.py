@@ -2,7 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-# noqa: E501
 events = [
     {
         'name': 'Interest Meeting 01',
