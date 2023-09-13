@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
@@ -48,12 +48,18 @@ events = [
     },
 ]
 
+
 # define a route like so:
 # @app.route(PATH HERE)
 # Right below the route, define a function that returns a message
 @app.route("/")
 def hello():
     return "Hello, World!"
+
+
+@app.route("/events")
+def get_events():
+    return jsonify(events)
 
 
 if __name__ == '__main__':
