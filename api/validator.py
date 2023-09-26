@@ -10,4 +10,8 @@ class Validator:
         for field, properties in self.schema.items():
             if properties.get('required') and field not in data:
                 return False, f"Missing property: {field}"
+<<<<<<< HEAD
         return True, ""
+=======
+        return True, ""
+>>>>>>> 5acd64d (added validation for put requests)
