@@ -14,16 +14,20 @@ validator = Validator(EVENT_SCHEMA)
 
 events_bp = Blueprint('events', __name__)
 
+
 @events_bp.route('/events', methods=['GET'])
 def get_events():
     return jsonify(events)
 
+
+  
 @events_bp.route('/events/<int:event_id>', methods=['GET'])
 def get_single_event(event_id):
     event = next((item for item in events if item['id'] == event_id), None)
     if event is None:
         return jsonify({"error": "Event not found"}), 404
     return jsonify(event)
+
 
 @events_bp.route('/events', methods=['POST'])
 def add_event():
@@ -52,5 +56,4 @@ def update_event(event_id):
         return jsonify({"error": "Event not found"}), 404
 
     event.update(update_data)
-
     return jsonify(event)
