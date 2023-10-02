@@ -102,6 +102,13 @@ const events = [
     endDate: date('2023-09-30 14:00'),
     location: 'E281',
   },
+  {
+    name: 'Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! This will be the final lab for members who signed up for our September coding challenge. Food will be provided to challenge participants! We hope to see you there!',
+    startDate: date('2023-10-03 18:00'),
+    endDate: date('2023-10-03 20:00'),
+    location: 'E281',
+  },
 ].sort((a, b) => a.startDate - b.startDate);
 
 function Events() {
