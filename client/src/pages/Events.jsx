@@ -109,6 +109,20 @@ const events = [
     endDate: date('2023-10-03 20:00'),
     location: 'E281',
   },
+  {
+    name: 'Dr. Li Lecture',
+    description: 'Join us for Dr.Li\'s upcoming lecture! Dr. Li will be giving a lecture titled \"Generating the Future: The AI Explosion and Its Implications\". We hope to see you there!',
+    startDate: date('2023-10-10 19:00'),
+    endDate: date('2023-10-10 20:00'),
+    location: 'High Library, Winters Alcove',
+  },
+  {
+    name: 'Club Website Development',
+    description: 'Join us for our upcoming meeting! We will work on completing tasks from the Trello board. We hope to see you there!',
+    startDate: date('2023-10-12 19:00'),
+    endDate: date('2023-10-12 20:00'),
+    location: 'E281',
+  },
 ].sort((a, b) => a.startDate - b.startDate);
 
 function Events() {
