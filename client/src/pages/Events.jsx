@@ -110,18 +110,19 @@ const events = [
     location: 'E281',
   },
   {
-    name: 'Dr. Li Lecture',
-    description: 'Join us for Dr.Li\'s upcoming lecture! Dr. Li will be giving a lecture titled \"Generating the Future: The AI Explosion and Its Implications\". We hope to see you there!',
-    startDate: date('2023-10-10 19:00'),
-    endDate: date('2023-10-10 20:00'),
-    location: 'High Library, Winters Alcove',
-  },
-  {
     name: 'Club Website Development',
     description: 'Join us for our upcoming meeting! We will work on completing tasks from the Trello board. We hope to see you there!',
     startDate: date('2023-10-12 19:00'),
     endDate: date('2023-10-12 20:00'),
     location: 'E281',
+  },
+  {
+    name: 'YCP Hacks',
+    description: 'Join us for an upcoming hackathon! York College is hosting a hackathon that will take place November 3-5. Contact our club president, Ethan Lajeunesse for more details. We hope to see you there!',
+    startDate: date('2023-11-3 17:00'),
+    endDate: date('2023-11-5 12:00'),
+    location: 'York College Willman Business Center',
+    link: 'https://ycphacks.io/',
   },
 ].sort((a, b) => a.startDate - b.startDate);
 
