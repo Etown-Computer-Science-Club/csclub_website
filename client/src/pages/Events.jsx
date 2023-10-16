@@ -173,7 +173,7 @@ const events = [
     endDate: date('2023-11-18 20:00'),
     location: 'E281',
   },
-  
+
 ].sort((a, b) => a.startDate - b.startDate);
 
 function Events() {
