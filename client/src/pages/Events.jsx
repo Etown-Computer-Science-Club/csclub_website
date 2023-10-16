@@ -119,11 +119,61 @@ const events = [
   {
     name: 'YCP Hacks',
     description: 'Join us for an upcoming hackathon! York College is hosting a hackathon that will take place November 3-5. Contact our club president, Ethan Lajeunesse for more details. We hope to see you there!',
-    startDate: date('2023-11-3 17:00'),
-    endDate: date('2023-11-5 12:00'),
+    startDate: date('2023-11-03 17:00'),
+    endDate: date('2023-11-05 12:00'),
     location: 'York College Willman Business Center',
     link: 'https://ycphacks.io/',
   },
+  {
+    name: 'React Workshop',
+    description: 'Join us for our upcoming meeting! Learn the foundational concepts necessary for building a React application. We hope to see you there!',
+    startDate: date('2023-10-17 19:00'),
+    endDate: date('2023-10-17 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! This will be the first lab for our October-November coding challenge. This would be a great time to  put together a team or come up with a project idea. We hope to see you there!',
+    startDate: date('2023-10-19 18:00'),
+    endDate: date('2023-10-19 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Members who signed up for our October-November coding challenge will continue working on their projects. We hope to see you there!',
+    startDate: date('2023-10-24 18:00'),
+    endDate: date('2023-10-24 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Members who signed up for our October-November coding challenge will continue working on their projects. We hope to see you there!',
+    startDate: date('2023-10-28 13:00'),
+    endDate: date('2023-10-28 16:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Members who signed up for our October-November coding challenge will continue working on their projects. We hope to see you there!',
+    startDate: date('2023-11-07 18:00'),
+    endDate: date('2023-11-07 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Members who signed up for our October-November coding challenge will continue working on their projects. We hope to see you there!',
+    startDate: date('2023-11-16 18:00'),
+    endDate: date('2023-11-16 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Lab Presentations',
+    description: 'Join us for our upcoming lab! Members who signed up for our October-November coding challenge will present their projects for judging. We hope to see you there!',
+    startDate: date('2023-11-18 08:00'),
+    endDate: date('2023-11-18 20:00'),
+    location: 'E281',
+  },
+  
 ].sort((a, b) => a.startDate - b.startDate);
 
 function Events() {
