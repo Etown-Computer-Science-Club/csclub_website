@@ -20,7 +20,8 @@ jobs:
               with:
                   node-version: 16
 
-            - run: |
+            - name: Install dependencies and build Client
+              run: |
                   cd client
                   npm ci
                   npm run build
