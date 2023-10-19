@@ -12,12 +12,20 @@ jobs:
     build_and_deploy:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+
             - run: |
                   cd client
                   npm ci
-                  npm i define-data-property
                   npm run build
+
+            - name: Deploy to Firebase Hosting
             - uses: FirebaseExtended/action-hosting-deploy@v0
               with:
                   repoToken: "${{ secrets.GITHUB_TOKEN }}"
