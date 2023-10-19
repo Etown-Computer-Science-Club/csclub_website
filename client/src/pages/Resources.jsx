@@ -18,6 +18,12 @@ export default Resources;
 
 const resources = [
   {
+    title: 'October-November Coding Challenge Signup',
+    link: 'https://forms.office.com/Pages/ResponsePage.aspx?id=Ek-IHdeg8EKLFTqRyFO8tbsr-BUD7VRPmWM50mleD2NUNzNYQUZZSENOTDAyVE8xVzVIWUFEMFZLTy4u',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Microsoft_Forms_%282019-present%29.svg/2203px-Microsoft_Forms_%282019-present%29.svg.png',
+    description: ['Sign up for the October-November Coding Challenge'],
+  },
+  {
     title: 'Refer Me',
     link: 'https://refer.me',
     image: 'https://s3.amazonaws.com/refer.me/site/logos/logo.png',
