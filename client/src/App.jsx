@@ -2,6 +2,7 @@ import {
   ChakraProvider, extendTheme, Box, Flex,
 } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import useRedirect from './redirects/useRedirect';
 
 import Resources from './pages/Resources';
 import AboutUs from './pages/AboutUs';
@@ -19,6 +20,8 @@ const theme = extendTheme({
 if (localStorage.getItem('chakra-ui-color-mode') === 'light') localStorage.removeItem('chakra-ui-color-mode');
 
 function App() {
+  useRedirect();
+
   return (
     <ChakraProvider theme={theme}>
       <Router>
