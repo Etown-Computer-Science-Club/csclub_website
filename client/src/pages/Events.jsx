@@ -291,7 +291,21 @@ const events = [
     endDate: date('2024-03-01 20:00'),
     location: 'E281',
   },
-].sort((a, b) => b.startDate - a.startDate);
+  {
+    name: 'Hen Hacks Meeting',
+    description: 'Join us for our upcoming meeting! We will be discussing information related to University of Delaware\'s hackathon. We hope to see you there!',
+    startDate: date('2024-03-02 19:00'),
+    endDate: date('2024-03-02 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Hen Hacks Meeting',
+    description: 'Join us for our upcoming meeting! We will be discussing information related to University of Delaware\'s hackathon. We hope to see you there!',
+    startDate: date('2024-03-03 19:00'),
+    endDate: date('2024-03-03 20:00'),
+    location: 'E281',
+  },
+];
 
 function Events() {
   // Get the current date in EST timezone
@@ -302,6 +316,8 @@ function Events() {
   const currentEvents = events.filter(
     (event) => event.startDate <= currentDate && event.endDate >= currentDate,
   );
+  previousEvents.sort((a, b) => b.startDate - a.startDate);
+  upcomingEvents.sort((a, b) => a.startDate - b.startDate);
 
   return (
     <>
