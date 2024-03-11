@@ -305,6 +305,20 @@ const events = [
     endDate: date('2024-03-03 20:00'),
     location: 'E281',
   },
+  {
+    name: 'Unity and You Workshop',
+    description: 'Join us for our upcoming workshop! Joshua Stoner will be hosting a workshop touching on the basics of working in a 3D space within Unity.',
+    startDate: date('2024-03-12 18:00'),
+    endDate: date('2024-03-12 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Spring Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Spring Coding Challenge participants will continue working on their projects. We hope to see you there!',
+    startDate: date('2024-03-14 18:00'),
+    endDate: date('2024-03-14 20:00'),
+    location: 'E281',
+  },
 ];
 
 function Events() {
