@@ -319,6 +319,36 @@ const events = [
     endDate: date('2024-03-14 20:00'),
     location: 'E281',
   },
+  {
+    name: 'The "Hello World" of Machine Learning',
+    description: 'Join us for our upcoming workshop! Alexander Fox will be hosting a workshop touching on the basics of Machine Learning. We hope to see you there!',
+    startDate: date('2024-03-19 19:00'),
+    endDate: date('2024-03-19 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Python Go Fish Competition - Intro Workshop',
+    description: 'Join us for our upcoming workshop! RMI will be hosting a Go Fish competition. Create a player in python and compete in live games. We hope to see you there!',
+    startDate: date('2024-03-20 19:00'),
+    endDate: date('2024-03-20 20:00'),
+    location: 'E273',
+    link: 'https://forms.office.com/r/kAuPACM8FC',
+  },
+  {
+    name: 'Python Go Fish Competition - Open Lab',
+    description: 'Join us for our upcoming lab! RMI will be hosting a Go Fish competition. Participants can drop in for guidance on their bots. We hope to see you there!',
+    startDate: date('2024-03-21 19:00'),
+    endDate: date('2024-03-21 20:00'),
+    location: 'E273',
+    link: 'https://forms.office.com/r/kAuPACM8FC',
+  },
+  {
+    name: 'Spring Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Spring Coding Challenge participants will continue working on their projects. We hope to see you there!',
+    startDate: date('2024-03-23 12:00'),
+    endDate: date('2024-03-23 16:00'),
+    location: 'E281',
+  },
 ];
 
 function Events() {
