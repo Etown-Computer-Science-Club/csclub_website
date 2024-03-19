@@ -24,23 +24,51 @@ function AboutUs() {
             </Tr>
             <Tr>
               <Td>President</Td>
-              <Td>Ethan Lajeunesse</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/ethan-lajeunesse-aa0992253/" isExternal>
+                  Ethan Lajeunesse
+                </Link>
+              </Td>
             </Tr>
             <Tr>
               <Td>Vice President</Td>
-              <Td>Michael Kennedy</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/michaelpkennedy1/" isExternal>
+                  Michael Kennedy
+                </Link>
+              </Td>
             </Tr>
             <Tr>
               <Td>Treasurer</Td>
-              <Td>Danielle Strausburger</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/danistrausburger/" isExternal>
+                  Danielle Strausburger
+                </Link>
+              </Td>
             </Tr>
             <Tr>
               <Td>Secretary</Td>
-              <Td>Giovanni Raso</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/giovanni-raso1/" isExternal>
+                  Giovanni Raso
+                </Link>
+              </Td>
             </Tr>
             <Tr>
               <Td>Webmaster</Td>
-              <Td>Alexander Fox</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/alexander-fox-etown/" isExternal>
+                  Alexander Fox
+                </Link>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>Outreach Lead</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/muzahidul-islam-3aa567289/" isExternal>
+                  Muzahidul Islam
+                </Link>
+              </Td>
             </Tr>
           </Tbody>
         </Table>

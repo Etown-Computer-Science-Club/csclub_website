@@ -1,12 +1,8 @@
 from flask import Flask
+from events import events_bp
 
 app = Flask(__name__)
-
-
-# define a route like so:
-# @app.route(PATH HERE)
-# Right below the route, define a function that returns a message
-
+app.register_blueprint(events_bp)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8000, debug=True)
