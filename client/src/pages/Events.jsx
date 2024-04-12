@@ -349,6 +349,42 @@ const events = [
     endDate: date('2024-03-23 16:00'),
     location: 'E281',
   },
+  {
+    name: 'Spring Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Spring Coding Challenge participants will continue working on their projects. We hope to see you there!',
+    startDate: date('2024-03-26 18:00'),
+    endDate: date('2024-03-26 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Python Go Fish Competition - Open Lab',
+    description: 'Join us for our upcoming lab! RMI will be hosting a Go Fish competition. Participants can drop in for guidance on their bots. We hope to see you there!',
+    startDate: date('2024-03-28 19:00'),
+    endDate: date('2024-03-28 20:00'),
+    location: 'E273',
+    link: 'https://forms.office.com/r/kAuPACM8FC',
+  },
+  {
+    name: 'Spring Coding Challenge Lab',
+    description: 'Join us for our upcoming lab! Spring Coding Challenge participants will continue working on their projects. We hope to see you there!',
+    startDate: date('2024-04-04 18:00'),
+    endDate: date('2024-04-04 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Spring Coding Challenge Judging and Presentations',
+    description: 'Join us for our upcoming presentations! Spring Coding Challenge participants will present their coding challenge projects to the judges. We hope to see you there!',
+    startDate: date('2024-04-06 11:00'),
+    endDate: date('2024-04-06 16:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Krunker.io',
+    description: 'Join us for our upcoming meeting! We will be playing Krunker.io. We hope to see you there!',
+    startDate: date('2024-04-11 19:00'),
+    endDate: date('2024-04-11 20:00'),
+    location: 'E281',
+  },
 ];
 
 function Events() {
