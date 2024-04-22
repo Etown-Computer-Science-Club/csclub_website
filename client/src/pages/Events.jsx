@@ -385,6 +385,27 @@ const events = [
     endDate: date('2024-04-11 20:00'),
     location: 'E281',
   },
+  {
+    name: 'End of Year and Award Celebration',
+    description: 'Join us for our upcoming meeting! We will be holding an end-of-year celebration for the club. Refreshments provided! We hope to see you there!',
+    startDate: date('2024-04-18 19:00'),
+    endDate: date('2024-04-18 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Portfolio Website Workshop',
+    description: 'Join us for our upcoming workshop! This workshop will focus mostly on getting a basic portfolio setup and then hosting it for FREE on GitHub Pages. We hope to see you there!',
+    startDate: date('2024-04-25 19:00'),
+    endDate: date('2024-04-25 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Krunker.io',
+    description: 'Join us for our upcoming meeting! We will be playing Krunker.io with NO CHEATS and hopefully no unplanned updates this time around! We hope to see you there!',
+    startDate: date('2024-04-30 19:00'),
+    endDate: date('2024-04-30 20:00'),
+    location: 'E281',
+  },
 ];
 
 function Events() {
