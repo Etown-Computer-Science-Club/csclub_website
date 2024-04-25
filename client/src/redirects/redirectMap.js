@@ -6,7 +6,7 @@ const redirectMap = {
   asd: 'https://elizabethtown-my.sharepoint.com/:p:/g/personal/lajeunessee_etown_edu/Ea8ugI9RL95PpEcjqSQmhEsB22Mnco1ad0j96zukAcExkg?e=DGlWf4',
   gpt: 'https://elizabethtown-my.sharepoint.com/:p:/g/personal/islamm_etown_edu/EfWkNvwn5OZLtyo65XB-qgUBRq0EI0c_-af4v7__WCZ_bw',
   ml: 'https://elizabethtown-my.sharepoint.com/:p:/g/personal/foxa1_etown_edu/EXxDwSvw04VAksfu01rjPjsBzKKt-QbkiW-cmCVzrPm4KQ?e=ieKgH8',
-
+  portfolio: 'https://github.com/Etown-Computer-Science-Club/portfolio-building-2',
 };
 
 export default redirectMap;
