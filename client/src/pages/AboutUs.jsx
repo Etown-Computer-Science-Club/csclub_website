@@ -1,7 +1,7 @@
 import {
   Box, Text, Heading, Table, Tbody, Tr, Th, Td, Link, Icon,
 } from '@chakra-ui/react';
-import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function AboutUs() {
   return (
@@ -14,7 +14,7 @@ function AboutUs() {
           computer science. We plan to attend hackathons, host workshops, and complete projects.
         </Text>
       </Box>
-      <Heading mb={5}>2023-24 Officers</Heading>
+      <Heading mb={5}>2024-25 Officers</Heading>
       <Box mb={5}>
         <Table variant="simple">
           <Tbody>
@@ -25,48 +25,40 @@ function AboutUs() {
             <Tr>
               <Td>President</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/ethan-lajeunesse-aa0992253/" isExternal>
-                  Ethan Lajeunesse
+                <Link href="https://www.linkedin.com/in/james-buck-799175290/" isExternal>
+                  James Buck
                 </Link>
               </Td>
             </Tr>
             <Tr>
               <Td>Vice President</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/michaelpkennedy1/" isExternal>
-                  Michael Kennedy
+                <Link href="https://www.linkedin.com/in/muzahidul-islam-3aa567289/" isExternal>
+                  Muzahidul Islam
                 </Link>
               </Td>
             </Tr>
             <Tr>
               <Td>Treasurer</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/danistrausburger/" isExternal>
-                  Danielle Strausburger
+                <Link href="https://www.linkedin.com/in/sam-huhn123/" isExternal>
+                  Samuel Huhn
                 </Link>
               </Td>
             </Tr>
             <Tr>
               <Td>Secretary</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/giovanni-raso1/" isExternal>
-                  Giovanni Raso
+                <Link href="https://www.linkedin.com/in/mattsmith46/" isExternal>
+                  Matthew Smith
                 </Link>
               </Td>
             </Tr>
             <Tr>
-              <Td>Webmaster</Td>
+              <Td>Tech Lead</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/alexander-fox-etown/" isExternal>
-                  Alexander Fox
-                </Link>
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>Outreach Lead</Td>
-              <Td>
-                <Link href="https://www.linkedin.com/in/muzahidul-islam-3aa567289/" isExternal>
-                  Muzahidul Islam
+                <Link href="https://www.linkedin.com/in/brian-duva-software-dev/" isExternal>
+                  Brian Duva
                 </Link>
               </Td>
             </Tr>
@@ -83,13 +75,13 @@ function AboutUs() {
           </Link>
         </Text>
         <Box display="flex" mt={5}>
-          <Link href="https://www.facebook.com/yourclub" isExternal mr={3}>
-            <Icon as={FaFacebook} boxSize={8} />
+          <Link href="https://github.com/Etown-Computer-Science-Club" isExternal mr={3}>
+            <Icon as={FaGithub} boxSize={8} />
           </Link>
-          <Link href="https://www.twitter.com/yourclub" isExternal mr={3}>
-            <Icon as={FaTwitter} boxSize={8} />
+          <Link href="https://www.instagram.com/etowncsclub" isExternal mr={3}>
+            <Icon as={FaInstagram} boxSize={8} />
           </Link>
-          <Link href="https://www.linkedin.com/yourclub" isExternal>
+          <Link href="https://www.linkedin.com/in/cs-club-etown/" isExternal>
             <Icon as={FaLinkedin} boxSize={8} />
           </Link>
         </Box>
