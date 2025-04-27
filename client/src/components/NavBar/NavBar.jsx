@@ -19,7 +19,7 @@ function NavBar() {
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <Flex align="center">
           <Image
-            src="CS_CLUB_LOGO.png"
+            src="New-Logo.png"
             alt="CS Club Logo"
             boxSize="50px"
             mr={3}
