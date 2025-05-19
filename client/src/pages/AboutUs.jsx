@@ -26,8 +26,8 @@ function AboutUs() {
               <Td>President</Td>
               <Td>
                 <Link href="https://www.linkedin.com/in/mattsmith46/" isExternal>
-                    Matthew Smith
-                  </Link>
+                  Matthew Smith
+                </Link>
               </Td>
             </Tr>
             <Tr>
