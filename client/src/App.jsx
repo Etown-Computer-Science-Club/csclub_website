@@ -29,7 +29,7 @@ function App() {
           <NavBar />
           <Box width="100%" padding={10} flex={1} maxW="container.xl" mx="auto">
             <Routes>
-              <Route path="/" element={<Events />} />
+              <Route path="/" element={<AboutUs />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/events" element={<Events />} />

@@ -5,9 +5,8 @@ import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
 const navItems = [
-  { title: 'Home', link: '/' },
-  { title: 'Events', link: '/events' },
   { title: 'About Us', link: '/about' },
+  { title: 'Events', link: '/events' },
   { title: 'Resources', link: '/resources' },
 ];
 
