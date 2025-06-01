@@ -6,9 +6,10 @@ function Footer() {
       <Divider mb={3} />
       <Text>
         &copy;
+        {' '}
         {new Date().getFullYear()}
         {' '}
-        CS Club
+        Elizabethtown College CS Club
       </Text>
     </Box>
   );
