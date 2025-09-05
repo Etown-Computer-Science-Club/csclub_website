@@ -50,7 +50,7 @@ const resources = [
     image: '/Perplexity-Logo.png',
     description: [
       'AI-powered search tool that provides clear answers using real-time web results.',
-      'Helps with research, learning, and quick fact-checking.'
+      'Helps with research, learning, and quick fact-checking.',
     ],
   },
   {
@@ -67,8 +67,8 @@ const resources = [
     link: 'https://claude.ai/new',
     image: '/Claude-Logo.png',
     description: [
-      'AI-powered search tool that provides clear answers using real-time web results.',
-      'Helps with research, learning, and quick fact-checking.'
+      'Conversational AI built by Anthropic for safety and reliability.',
+      'Helps with writing, coding, research, and summaries.',
     ],
   },
   {
