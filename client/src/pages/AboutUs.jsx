@@ -16,7 +16,7 @@ function AboutUs() {
           computer science. We plan to attend hackathons, host workshops, and complete projects.
         </Text>
       </Box>
-      <Heading mb={5}>2024-25 Officers</Heading>
+      <Heading mb={5}>2025-2026 Officers</Heading>
       <Box mb={5}>
         <Table variant="simple">
           <Tbody>
