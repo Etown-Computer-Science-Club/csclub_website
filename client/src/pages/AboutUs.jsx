@@ -2,7 +2,7 @@ import {
   Box, Text, Heading, Table, Tbody, Tr, Th, Td, Link, Icon,
 } from '@chakra-ui/react';
 import {
-  FaGithub, FaInstagram, FaLinkedin, FaFacebook, FaDiscord,
+  FaGithub, FaInstagram, FaLinkedin, FaFacebook, FaDiscord, FaGoogleDrive,
 } from 'react-icons/fa';
 
 function AboutUs() {
@@ -113,8 +113,11 @@ function AboutUs() {
           <Link href="https://www.facebook.com/profile.php?id=61574682497514" isExternal mr={3}>
             <Icon as={FaFacebook} boxSize={8} />
           </Link>
-          <Link href="https://discord.com/invite/2qeFUwWfF8" isExternal>
+          <Link href="https://discord.com/invite/2qeFUwWfF8" isExternal mr={3}>
             <Icon as={FaDiscord} boxSize={8} />
+          </Link>
+          <Link href="https://drive.google.com/drive/folders/1tmvBG6ZtPZRnaOj8D06ZS8E2D2KQMEZJ?usp=drive_link" isExternal mr={3}>
+            <Icon as={FaGoogleDrive} boxSize={8} />
           </Link>
         </Box>
       </Box>
