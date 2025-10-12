@@ -6,7 +6,7 @@ function date(dateString) {
   return zonedTimeToUtc(dateString, 'America/New_York');
 }
 
-//TODO: Replace with API or other call to not hardcode events
+// TODO: Replace with API or other call to not hardcode events
 const events = [
   {
     name: 'Interest Meeting 01',
@@ -501,7 +501,7 @@ const events = [
     startDate: date('2025-12-02 19:00'),
     endDate: date('2025-12-02 20:00'),
     location: 'E281',
-  }
+  },
 ];
 
 function Events() {
