@@ -6,6 +6,7 @@ function date(dateString) {
   return zonedTimeToUtc(dateString, 'America/New_York');
 }
 
+//TODO: Replace with API or other call to not hardcode events
 const events = [
   {
     name: 'Interest Meeting 01',
@@ -406,6 +407,101 @@ const events = [
     endDate: date('2024-04-30 20:00'),
     location: 'E281',
   },
+  {
+    name: 'Interest Meeting',
+    description: 'Join us for our upcoming interest meetings! The Computer Science Club is excited to announce that we will be hosting multiple meetings each week, each with a different focus. We want to find the best times for our potential members, so we\'re offering several options. Come and learn more about what our club has to offer and how you can get involved. We hope to see you there!',
+    startDate: date('2025-09-09 19:00'),
+    endDate: date('2025-09-09 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Git/GitHub Workshop',
+    description: 'Join us for our workshop on the basics of using Git and GitHub! In this workshop, we will cover the fundamentals of version control using Git, as well as how to use GitHub for collaboration and project management. Whether you\'re new to Git or looking to brush up on your skills, this workshop is perfect for you. We will provide hands-on exercises and plenty of opportunities for questions and discussion. Don\'t miss out on this chance to learn more about one of the most important tools in modern software development!',
+    startDate: date('2025-09-16 19:00'),
+    endDate: date('2025-09-16 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Professional Development Workshop 1',
+    description: 'Join us for our upcoming Professional Development Workshop! The Computer Science Club is excited to announce that we will be hosting a workshop focused on helping students develop the skills they need to succeed in their careers. We will cover topics such as resume writing, interview preparation, and networking strategies. Don\'t miss this opportunity to gain valuable insights and make connections with industry professionals!',
+    startDate: date('2025-09-23 19:00'),
+    endDate: date('2025-09-23 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Professional Development Workshop 2',
+    description: 'Join us for a continuation of our Professional Development Workshop series! The Computer Science Club is excited to announce that we will be hosting a second workshop focused on helping students further develop the skills they need to succeed in their careers.',
+    startDate: date('2025-09-30 19:00'),
+    endDate: date('2025-09-30 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Check-In Lab / WebFX Workshop',
+    description: 'Join us for our upcoming Coding Challenge Check-In Lab / WebFX Workshop! The Computer Science Club is excited to announce that we will be hosting a workshop focused on helping students prepare their coding challenge projects followed by a WebFX presentation by a current employee. Don\'t miss this opportunity to gain valuable insights and make connections with industry professionals, as well as get help from our club officers with any questions you may have about your coding challenge project!',
+    startDate: date('2025-10-02 18:30'),
+    endDate: date('2025-10-02 20:30'),
+    location: 'E281',
+  },
+  {
+    name: 'Trivia Night',
+    description: 'Join us for our upcoming Trivia Night! The Computer Science Club is excited to host a fun evening of trivia, where you can test your knowledge on a variety of Computer Science related topics, including cybersecurity and data science. Compete against other students and meet new people! Prizes will be awarded to the top participant, so don\'t miss this opportunity to show off your trivia skills and have a great time!',
+    startDate: date('2025-10-07 19:00'),
+    endDate: date('2025-10-07 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Advising and Class Schedules Workshop',
+    description: 'Join us for our upcoming Advising and Class Schedules Workshop! The Computer Science Club is excited to announce that we will be hosting a workshop focused on helping students navigate the advising process and plan their class schedules. We will cover topics such as how to choose the right classes, how to work with your advisor, and how to make the most of your academic experience. Don\'t miss this opportunity to gain valuable insights and make connections with fellow students!',
+    startDate: date('2025-10-14 19:00'),
+    endDate: date('2025-10-14 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Coding Challenge Check-In Lab / Basic Coding Practices Workshop',
+    description: 'Join us for our upcoming Coding Challenge Check-In Lab / Basic Coding Practices Workshop! The Computer Science Club is excited to announce that we will be hosting a workshop focused on helping students prepare for their coding challenges. We will cover topics such as basic coding practices, problem-solving techniques, and how to approach coding challenges effectively. Don\'t miss this opportunity to gain valuable insights and make connections with fellow students!',
+    startDate: date('2025-10-16 19:00'),
+    endDate: date('2025-10-16 20:00'),
+    location: 'E281',
+  },
+  {
+    name: 'Generative AI Workshop',
+    description: 'Join us for our upcoming Generative AI Workshop! The Computer Science Club is excited to announce that we will be hosting a workshop focused on helping students understand and work with generative AI technologies. We will cover topics such as how to run or access your own models, how to use them effectively, and how to prompt them for best results. Don\'t miss this opportunity to gain valuable insights and make connections with fellow students!',
+    startDate: date('2025-10-21 19:00'),
+    endDate: date('2025-10-21 20:00'),
+    location: 'E281',
+  },
+  {
+    id: 10,
+    name: 'Coding Challenge Judging Day',
+    description: 'Join us for our upcoming Coding Challenge Judging Day! The Computer Science Club is excited to announce that we will be hosting a day dedicated to judging the submissions from our recent coding challenge. Participants will have the opportunity to showcase their solutions and receive feedback from our panel of judges. Don\'t miss this chance to learn from your peers and improve your coding skills!',
+    startDate: date('2025-10-25'),
+    endDate: date('2025-10-25'),
+    location: 'Gibble Auditorium',
+  },
+  {
+    id: 11,
+    name: 'Arduino Workshop',
+    description: 'Join us for our upcoming Arduino Workshop! The Computer Science Club is excited to announce that we will be hosting a workshop focused on helping students learn about Arduino and how to create their own projects using this versatile platform. We will cover topics such as getting started with Arduino, basic electronics, and how to program your Arduino board. Don\'t miss this opportunity to gain hands-on experience and unleash your creativity!',
+    startDate: date('2025-11-11 19:00'),
+    endDate: date('2025-11-11 20:00'),
+    location: 'E281',
+  },
+  {
+    id: 12,
+    name: 'C# / .NET Workshop',
+    description: 'Join us for our C# / .NET Workshop! The Computer Science Club is excited to announce that we will be hosting a workshop focused on helping students learn about C# and the .NET framework. We will cover topics such as getting started with C#, building web applications with ASP.NET, and working with databases using Entity Framework. Don\'t miss this opportunity to gain valuable skills and enhance your programming knowledge!',
+    startDate: date('2025-11-18 19:00'),
+    endDate: date('2025-11-18 20:00'),
+    location: 'E281',
+  },
+  {
+    id: 13,
+    name: 'Krunker Game Night',
+    description: 'Join us for our Krunker Game Night! The Computer Science Club is excited to announce that we will be hosting a gaming night featuring Krunker, a fast-paced first-person shooter game. This is a great opportunity to relax, unwind, and connect with fellow students in a fun and casual setting. Don\'t miss this chance to showcase your skills and enjoy a night of friendly competition!',
+    startDate: date('2025-12-02 19:00'),
+    endDate: date('2025-12-02 20:00'),
+    location: 'E281',
+  }
 ];
 
 function Events() {
