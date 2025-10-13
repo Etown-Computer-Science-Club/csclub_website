@@ -49,10 +49,18 @@ function AboutUs() {
               </Td>
             </Tr>
             <Tr>
-              <Td>Secretary</Td>
+              <Td>Social Media Lead</Td>
               <Td>
                 <Link href="https://www.linkedin.com/in/kanade-ueda-0b0783289/" isExternal>
                   Kylie Ueda
+                </Link>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>Secretary</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/owyang137/" isExternal>
+                  Owen Yang
                 </Link>
               </Td>
             </Tr>
