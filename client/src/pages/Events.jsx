@@ -1,6 +1,7 @@
 import { Heading } from '@chakra-ui/react';
 import { utcToZonedTime, zonedTimeToUtc } from 'date-fns-tz';
 import Event from '../components/Event';
+import EventsCalendar from '../components/EventsCalendar';
 import rawEvents from '../components/eventData.json';
 
 function date(dateString) {
@@ -28,6 +29,7 @@ function Events() {
 
   return (
     <>
+      <EventsCalendar events={events} />
       {currentEvents.length > 0 && (
         <>
           <Heading mb={5}>Current Events</Heading>
