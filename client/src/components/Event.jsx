@@ -5,7 +5,7 @@ import { format, isSameDay } from 'date-fns';
 import PropTypes from 'prop-types';
 
 function Event({
-  name, description, startDate, endDate, link, location,
+  name, description, startDate, endDate, link, location, host,
 }) {
   const isSingleDayEvent = isSameDay(startDate, endDate);
   const dateDisplay = isSingleDayEvent
@@ -28,6 +28,13 @@ function Event({
           {location}
         </Text>
       )}
+      {host && (
+        <Text fontSize="sm" mb={2}>
+          Host:
+          {' '}
+          {host}
+        </Text>
+      )}
       {link && (
         <Link href={link} isExternal color="blue.500">
           More Info
@@ -45,6 +52,7 @@ Event.propTypes = {
   endDate: PropTypes.instanceOf(Date).isRequired,
   link: PropTypes.string,
   location: PropTypes.string,
+  host: PropTypes.string,
 };
 
 export default Event;

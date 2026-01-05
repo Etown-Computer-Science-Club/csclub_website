@@ -1,7 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { utcToZonedTime } from 'date-fns-tz';
 import { format } from 'date-fns';
-import { Box, Button, Grid, Text, VStack, HStack } from '@chakra-ui/react';
+import { Box, Button, Grid, Text, VStack, HStack, Tooltip } from '@chakra-ui/react';
 
 function toKey(date) {
   return date.toLocaleDateString('en-CA'); // YYYY-MM-DD
@@ -32,8 +32,15 @@ export default function EventsCalendar({ events }) {
       if (e.endDate > latest) latest = e.endDate;
     });
 
-    const startMonth = new Date(utcToZonedTime(earliest, tz).getFullYear(), utcToZonedTime(earliest, tz).getMonth(), 1);
-    const endMonth = new Date(utcToZonedTime(latest, tz).getFullYear(), utcToZonedTime(latest, tz).getMonth(), 1);
+    const earliestMonth = new Date(utcToZonedTime(earliest, tz).getFullYear(), utcToZonedTime(earliest, tz).getMonth(), 1);
+    const latestMonth = new Date(utcToZonedTime(latest, tz).getFullYear(), utcToZonedTime(latest, tz).getMonth(), 1);
+
+    // Ensure the current month is included in the range so the calendar can default to it
+    const currentZoned = utcToZonedTime(new Date(), tz);
+    const currentMonth = new Date(currentZoned.getFullYear(), currentZoned.getMonth(), 1);
+
+    const startMonth = earliestMonth < currentMonth ? earliestMonth : currentMonth;
+    const endMonth = latestMonth > currentMonth ? latestMonth : currentMonth;
 
     const monthsArr = monthRange(startMonth, endMonth);
 
@@ -56,8 +63,16 @@ export default function EventsCalendar({ events }) {
   }, [events]);
 
   const today = utcToZonedTime(new Date(), tz);
-  const defaultIndex = Math.min(Math.max(months.findIndex((m) => m.getFullYear() === today.getFullYear() && m.getMonth() === today.getMonth()), 0), months.length - 1);
-  const [index, setIndex] = useState(defaultIndex >= 0 ? defaultIndex : 0);
+  const [index, setIndex] = useState(0);
+
+  // When months are computed, default to the current month if it's within range,
+  // otherwise clamp to the available range (earliest/latest event month).
+  useEffect(() => {
+    if (!months || months.length === 0) return;
+    const found = months.findIndex((m) => m.getFullYear() === today.getFullYear() && m.getMonth() === today.getMonth());
+    const clamped = Math.min(Math.max(found, 0), months.length - 1);
+    setIndex(clamped >= 0 ? clamped : 0);
+  }, [months]);
 
   if (!months || months.length === 0) return null;
 
@@ -102,33 +117,51 @@ export default function EventsCalendar({ events }) {
             const key = toKey(zoned);
             const evts = eventsByDay[key] || [];
             const evt = evts[0];
+            const timeRange = evt
+              ? `${format(utcToZonedTime(evt.startDate, tz), 'h:mm a')}${evt.endDate && evt.endDate > evt.startDate ? ` - ${format(utcToZonedTime(evt.endDate, tz), 'h:mm a')}` : ''}`
+              : '';
+            const tooltipContent = evt ? (
+              <VStack align="start" spacing={1} maxW="xs">
+                <Text fontWeight="semibold">{evt.name}</Text>
+                <Text fontSize="sm" color="gray.600">{timeRange}</Text>
+                {evt.location && <Text fontSize="sm">Location: {evt.location}</Text>}
+                {evt.host && <Text fontSize="sm">Host: {evt.host}</Text>}
+                <Text pt={2} fontSize="sm">{evt.description}</Text>
+              </VStack>
+            ) : null;
+
             return (
-              <Box
-                key={idx}
-                minH="64px"
-                borderWidth={1}
-                borderColor={thisMonth ? 'gray.200' : 'transparent'}
-                borderRadius="md"
-                p={2}
-              >
-                <Text fontSize="sm" color={thisMonth ? 'gray.800' : 'gray.400'}>{d.getDate()}</Text>
-                {evt && (
-                  <>
-                    <Text fontSize="xs" fontWeight="semibold" isTruncated title={evt.title}>
-                      {evt.title}
-                    </Text>
-                    <Text fontSize="xs" color="gray.600">
-                      {format(utcToZonedTime(evt.startDate, tz), 'h:mm a')}
-                      {evt.endDate && evt.endDate > evt.startDate && ` - ${format(utcToZonedTime(evt.endDate, tz), 'h:mm a')}`}
-                    </Text>
-                    {evt.location && (
-                      <Text fontSize="xs" color="gray.600" isTruncated>
-                        {evt.location}
+              <Tooltip key={idx} label={tooltipContent} hasArrow placement="top" openDelay={200}>
+                <Box
+                  borderWidth={1}
+                  borderColor={thisMonth ? 'gray.200' : 'transparent'}
+                  borderRadius="md"
+                  p={2}
+                  sx={{ aspectRatio: '1 / 1' }}
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="flex-start"
+                  justifyContent="flex-start"
+                  overflow="hidden"
+                >
+                  <Text fontSize="sm" color={thisMonth ? 'gray.800' : 'gray.400'}>{d.getDate()}</Text>
+                  {evt && (
+                    <>
+                      <Text fontSize="xs" fontWeight="semibold" noOfLines={3} title={evt.name}>
+                        {evt.name}
                       </Text>
-                    )}
-                  </>
-                )}
-              </Box>
+                      <Text fontSize="xs" color="gray.600">
+                        {timeRange}
+                      </Text>
+                      {evt.location && (
+                        <Text fontSize="xs" color="gray.600" noOfLines={1}>
+                          {evt.location}
+                        </Text>
+                      )}
+                    </>
+                  )}
+                </Box>
+              </Tooltip>
             );
           })}
         </Grid>
