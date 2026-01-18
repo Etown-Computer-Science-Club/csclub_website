@@ -73,14 +73,6 @@ function AboutUs() {
               </Td>
             </Tr>
             <Tr>
-              <Td>Presidential Advisor</Td>
-              <Td>
-                <Link href="https://www.linkedin.com/in/james-buck-799175290/" isExternal>
-                  James Buck
-                </Link>
-              </Td>
-            </Tr>
-            <Tr>
               <Td>Faculty Advisor</Td>
               <Td>
                 <Link href="https://www.linkedin.com/in/peilongli/" isExternal>
