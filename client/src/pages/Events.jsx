@@ -1,6 +1,9 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, Link, VStack } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 import { utcToZonedTime, zonedTimeToUtc } from 'date-fns-tz';
 import Event from '../components/Event';
+import EventsCalendar from '../components/EventsCalendar';
+import rawEvents from '../components/eventData.json';
 
 function date(dateString) {
   return zonedTimeToUtc(dateString, 'America/New_York');
@@ -555,6 +558,7 @@ function Events() {
 
   return (
     <>
+      <EventsCalendar events={events} />
       {currentEvents.length > 0 && (
         <>
           <Heading mb={5}>Current Events</Heading>
@@ -572,14 +576,11 @@ function Events() {
           ))}
         </>
       )}
-
       {previousEvents.length > 0 && (
-        <>
-          <Heading mb={5}>Previous Events</Heading>
-          {previousEvents.map((event, index) => (
-            <Event {...event} key={index} />
-          ))}
-        </>
+        <VStack align="start" spacing={2} mt={6}>
+          <Heading size="md">Previous Events</Heading>
+          <Link as={RouterLink} to="/events/past" color="blue.400">View all previous events</Link>
+        </VStack>
       )}
     </>
   );
