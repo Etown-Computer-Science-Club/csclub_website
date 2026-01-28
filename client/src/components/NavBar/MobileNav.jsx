@@ -33,9 +33,15 @@ function MobileNav({ navItems }) {
             <DrawerBody>
               <VStack p={0}>
                 {navItems.map((item) => (
-                  <Link as={RouterLink} to={item.link} mr={5} key={item.link} onClick={onClose}>
-                    {item.title}
-                  </Link>
+                  item.external ? (
+                    <Link href={item.link} mr={5} key={item.link} isExternal onClick={onClose}>
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <Link as={RouterLink} to={item.link} mr={5} key={item.link} onClick={onClose}>
+                      {item.title}
+                    </Link>
+                  )
                 ))}
               </VStack>
             </DrawerBody>

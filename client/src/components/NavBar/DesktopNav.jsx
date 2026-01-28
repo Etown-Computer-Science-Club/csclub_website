@@ -6,9 +6,15 @@ function DesktopNav({ navItems }) {
   return (
     <Flex align="center">
       {navItems.map((item) => (
-        <Link as={RouterLink} to={item.link} mr={5} key={item.link}>
-          {item.title}
-        </Link>
+        item.external ? (
+          <Link href={item.link} mr={5} key={item.link} isExternal>
+            {item.title}
+          </Link>
+        ) : (
+          <Link as={RouterLink} to={item.link} mr={5} key={item.link}>
+            {item.title}
+          </Link>
+        )
       ))}
     </Flex>
   );

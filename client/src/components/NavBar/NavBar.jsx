@@ -8,6 +8,7 @@ const navItems = [
   { title: 'About Us', link: '/about' },
   { title: 'Events', link: '/events' },
   { title: 'Resources', link: '/resources' },
+  { title: 'Feedback', link: 'https://forms.gle/dsD54bsbjDkfm52F6', external: true }, 
 ];
 
 function NavBar() {
