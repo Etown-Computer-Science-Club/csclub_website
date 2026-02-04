@@ -10,6 +10,7 @@ import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer';
 import Events from './pages/Events';
 import PastEvents from './pages/PastEvents';
+import Fundraising from './pages/Fundraising';
 
 const theme = extendTheme({
   config: {
@@ -35,6 +36,7 @@ function App() {
               <Route path="/about" element={<AboutUs />} />
               <Route path="/events" element={<Events />} />
               <Route path="/events/past" element={<PastEvents />} />
+              <Route path="/fundraising" element={<Fundraising />} />
             </Routes>
           </Box>
           <Footer />

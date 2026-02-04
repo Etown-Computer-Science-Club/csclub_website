@@ -20,22 +20,6 @@ export default Resources;
 
 const resources = [
   {
-    title: 'Student Charge Clothing Form',
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdXS9dQWAxydGCyRWJuYPorNUJTqQs_vOVCR0N7YQgdx8A9mA/viewform',
-    image: '/shirt.png',
-    description: ['Trucker-Hat Style Hats',
-      'Bella Canvas Shirts',
-      'Fleece Pullover Hooded Sweatshirts'],
-  },
-  {
-    title: 'Credit Card Clothing Form',
-    link: 'https://forms.gle/pJx51bMcaeHUUnQdA',
-    image: '/sweatshirt.png',
-    description: ['Trucker-Hat Style Hats',
-      'Bella Canvas Shirts',
-      'Fleece Pullover Hooded Sweatshirts'],
-  },
-  {
     title: 'GitHub Education Pack',
     link: 'https://education.github.com/pack',
     image: '/GitHub-Logo.png',
