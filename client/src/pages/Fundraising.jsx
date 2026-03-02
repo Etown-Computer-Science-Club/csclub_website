@@ -26,11 +26,11 @@ const fundraisingItems = [
       'Fleece Pullover Hooded Sweatshirts'],
   },
   {
-    title: 'Credit Card Clothing Form',
-    link: 'https://forms.gle/pJx51bMcaeHUUnQdA',
-    image: '/sweatshirt.png',
-    description: ['Trucker-Hat Style Hats',
-      'Bella Canvas Shirts',
-      'Fleece Pullover Hooded Sweatshirts'],
-  },
+    title: 'Print Services Form',
+    link: 'https://forms.gle/tXWyqkmDE2X2iRNEA',
+    image: '/mug.jpg',
+    description: ['Custom Pillows',
+      'Custom Mugs',
+      'Custom Shirts'],
+  }
 ];
