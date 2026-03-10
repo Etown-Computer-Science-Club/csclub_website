@@ -1,8 +1,12 @@
-import { Box, Heading, VStack, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  VStack,
+  Text,
+} from '@chakra-ui/react';
 
 function EventsGoogleCalendar() {
-  
-  const calendarId = "ZXRvd25jc0BnbWFpbC5jb20";
+  const calendarId = 'ZXRvd25jc0BnbWFpbC5jb20';
 
   return (
     <VStack align="stretch" spacing={6}>

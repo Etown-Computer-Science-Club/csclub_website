@@ -1,4 +1,4 @@
-#TODO: eventually keep up to date with eventData.json from the client side via database or something else
+# TODO: eventually keep up to date with eventData.json from the client side via database or something else
 events = [
     {
         'id': 1,

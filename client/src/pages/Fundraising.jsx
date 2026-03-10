@@ -32,5 +32,5 @@ const fundraisingItems = [
     description: ['Custom Pillows',
       'Custom Mugs',
       'Custom Shirts'],
-  }
+  },
 ];
