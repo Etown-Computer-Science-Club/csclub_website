@@ -1,7 +1,16 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { utcToZonedTime } from 'date-fns-tz';
 import { format } from 'date-fns';
-import { Box, Button, Grid, Text, VStack, HStack, Tooltip } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Grid,
+  Text,
+  VStack,
+  HStack,
+  Tooltip,
+} from '@chakra-ui/react';
 
 function toKey(date) {
   return date.toLocaleDateString('en-CA'); // YYYY-MM-DD
@@ -32,8 +41,10 @@ export default function EventsCalendar({ events }) {
       if (e.endDate > latest) latest = e.endDate;
     });
 
-    const earliestMonth = new Date(utcToZonedTime(earliest, tz).getFullYear(), utcToZonedTime(earliest, tz).getMonth(), 1);
-    const latestMonth = new Date(utcToZonedTime(latest, tz).getFullYear(), utcToZonedTime(latest, tz).getMonth(), 1);
+    const earliestZoned = utcToZonedTime(earliest, tz);
+    const latestZoned = utcToZonedTime(latest, tz);
+    const earliestMonth = new Date(earliestZoned.getFullYear(), earliestZoned.getMonth(), 1);
+    const latestMonth = new Date(latestZoned.getFullYear(), latestZoned.getMonth(), 1);
 
     // Ensure the current month is included in the range so the calendar can default to it
     const currentZoned = utcToZonedTime(new Date(), tz);
@@ -48,7 +59,7 @@ export default function EventsCalendar({ events }) {
     const map = {};
     events.forEach((evt) => {
       // Iterate from start to end inclusive
-      let cur = new Date(evt.startDate);
+      const cur = new Date(evt.startDate);
       const end = new Date(evt.endDate);
       while (cur <= end) {
         const zoned = utcToZonedTime(cur, tz);
@@ -69,7 +80,12 @@ export default function EventsCalendar({ events }) {
   // otherwise clamp to the available range (earliest/latest event month).
   useEffect(() => {
     if (!months || months.length === 0) return;
-    const found = months.findIndex((m) => m.getFullYear() === today.getFullYear() && m.getMonth() === today.getMonth());
+    const found = months.findIndex(
+      (m) => (
+        m.getFullYear() === today.getFullYear()
+        && m.getMonth() === today.getMonth()
+      ),
+    );
     const clamped = Math.min(Math.max(found, 0), months.length - 1);
     setIndex(clamped >= 0 ? clamped : 0);
   }, [months]);
@@ -84,7 +100,7 @@ export default function EventsCalendar({ events }) {
   const startOffset = firstDay.getDay();
   const days = [];
   // 6 weeks (42 cells)
-  for (let i = 0; i < 42; i++) {
+  for (let i = 0; i < 42; i += 1) {
     const dayNum = i - startOffset + 1;
     const cellDate = new Date(month.getFullYear(), month.getMonth(), dayNum);
     days.push(cellDate);
@@ -99,7 +115,11 @@ export default function EventsCalendar({ events }) {
           Prev
         </Button>
         <Text fontSize="lg" fontWeight="semibold">{monthLabel}</Text>
-        <Button onClick={() => setIndex((i) => i + 1)} isDisabled={index >= months.length - 1} size="sm">
+        <Button
+          onClick={() => setIndex((i) => i + 1)}
+          isDisabled={index >= months.length - 1}
+          size="sm"
+        >
           Next
         </Button>
       </HStack>
@@ -117,15 +137,30 @@ export default function EventsCalendar({ events }) {
             const key = toKey(zoned);
             const evts = eventsByDay[key] || [];
             const evt = evts[0];
+            const endDateFormatted = evt && evt.endDate && evt.endDate > evt.startDate
+              ? ` - ${format(utcToZonedTime(evt.endDate, tz), 'h:mm a')}`
+              : '';
             const timeRange = evt
-              ? `${format(utcToZonedTime(evt.startDate, tz), 'h:mm a')}${evt.endDate && evt.endDate > evt.startDate ? ` - ${format(utcToZonedTime(evt.endDate, tz), 'h:mm a')}` : ''}`
+              ? `${format(utcToZonedTime(evt.startDate, tz), 'h:mm a')}${endDateFormatted}`
               : '';
             const tooltipContent = evt ? (
               <VStack align="start" spacing={1} maxW="xs">
                 <Text fontWeight="semibold">{evt.name}</Text>
                 <Text fontSize="sm" color="gray.600">{timeRange}</Text>
-                {evt.location && <Text fontSize="sm">Location: {evt.location}</Text>}
-                {evt.host && <Text fontSize="sm">Host: {evt.host}</Text>}
+                {evt.location && (
+                  <Text fontSize="sm">
+                    Location:
+                    {' '}
+                    {evt.location}
+                  </Text>
+                )}
+                {evt.host && (
+                  <Text fontSize="sm">
+                    Host:
+                    {' '}
+                    {evt.host}
+                  </Text>
+                )}
                 <Text pt={2} fontSize="sm">{evt.description}</Text>
               </VStack>
             ) : null;
@@ -169,3 +204,16 @@ export default function EventsCalendar({ events }) {
     </VStack>
   );
 }
+
+EventsCalendar.propTypes = {
+  events: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      startDate: PropTypes.instanceOf(Date).isRequired,
+      endDate: PropTypes.instanceOf(Date).isRequired,
+      location: PropTypes.string,
+      host: PropTypes.string,
+      description: PropTypes.string,
+    }),
+  ).isRequired,
+};

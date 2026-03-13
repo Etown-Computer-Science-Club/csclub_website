@@ -2,7 +2,7 @@ import {
   Box, Text, Heading, Table, Tbody, Tr, Th, Td, Link, Icon,
 } from '@chakra-ui/react';
 import {
-  FaGithub, FaInstagram, FaLinkedin, FaFacebook, FaDiscord, FaGoogleDrive,
+  FaGithub, FaInstagram, FaLinkedin, FaFacebook, FaDiscord, FaGoogleDrive, FaCalendarAlt,
 } from 'react-icons/fa';
 
 function AboutUs() {
@@ -118,6 +118,9 @@ function AboutUs() {
           </Link>
           <Link href="https://drive.google.com/drive/folders/1tmvBG6ZtPZRnaOj8D06ZS8E2D2KQMEZJ?usp=drive_link" isExternal mr={3}>
             <Icon as={FaGoogleDrive} boxSize={8} />
+          </Link>
+          <Link href="https://calendar.google.com/calendar/u/3?cid=ZXRvd25jc0BnbWFpbC5jb20" isExternal mr={3} aria-label="Google Calendar">
+            <Icon as={FaCalendarAlt} boxSize={8} />
           </Link>
         </Box>
       </Box>
