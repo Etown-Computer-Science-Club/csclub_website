@@ -1,4 +1,6 @@
-import { Heading, Text, Link, Box } from '@chakra-ui/react';
+import {
+  Heading, Text, Link, Box,
+} from '@chakra-ui/react';
 import { utcToZonedTime, zonedTimeToUtc } from 'date-fns-tz';
 import Event from '../components/Event';
 import rawEvents from '../components/eventData.json';

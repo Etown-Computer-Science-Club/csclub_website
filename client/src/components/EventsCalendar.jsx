@@ -167,35 +167,35 @@ export default function EventsCalendar({ events }) {
 
             return (
               <Tooltip key={idx} label={tooltipContent} hasArrow placement="top" openDelay={200}>
-              <Box
-                borderWidth={1}
-                borderColor={thisMonth ? 'gray.200' : 'transparent'}
-                borderRadius="md"
-                p={{ base: 1, md: 2 }}
-                sx={{ aspectRatio: '1 / 1' }}
-                display="flex"
-                flexDirection="column"
-                alignItems="flex-start"
-                justifyContent="flex-start"
-                overflow="hidden"
-              >
-                <Text fontSize={{ base: 'xs', md: 'sm' }} color={thisMonth ? 'gray.800' : 'gray.400'}>{d.getDate()}</Text>
-                {evt && (
-                  <>
-                    <Text fontSize={{ base: 'xs', md: 'xs' }} fontWeight="semibold" noOfLines={3} title={evt.name}>
-                      {evt.name}
-                    </Text>
-                    <Text fontSize={{ base: 'xs', md: 'xs' }} color="gray.600">
-                      {timeRange}
-                    </Text>
-                    {evt.location && (
-                      <Text fontSize={{ base: 'xs', md: 'xs' }} color="gray.600" noOfLines={1}>
-                        {evt.location}
+                <Box
+                  borderWidth={1}
+                  borderColor={thisMonth ? 'gray.200' : 'transparent'}
+                  borderRadius="md"
+                  p={{ base: 1, md: 2 }}
+                  sx={{ aspectRatio: '1 / 1' }}
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="flex-start"
+                  justifyContent="flex-start"
+                  overflow="hidden"
+                >
+                  <Text fontSize={{ base: 'xs', md: 'sm' }} color={thisMonth ? 'gray.800' : 'gray.400'}>{d.getDate()}</Text>
+                  {evt && (
+                    <>
+                      <Text fontSize={{ base: 'xs', md: 'xs' }} fontWeight="semibold" noOfLines={3} title={evt.name}>
+                        {evt.name}
                       </Text>
-                    )}
-                  </>
-                )}
-              </Box>
+                      <Text fontSize={{ base: 'xs', md: 'xs' }} color="gray.600">
+                        {timeRange}
+                      </Text>
+                      {evt.location && (
+                        <Text fontSize={{ base: 'xs', md: 'xs' }} color="gray.600" noOfLines={1}>
+                          {evt.location}
+                        </Text>
+                      )}
+                    </>
+                  )}
+                </Box>
               </Tooltip>
             );
           })}
