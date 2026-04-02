@@ -17,17 +17,17 @@ function NavBar() {
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
 
   return (
-    <Box bg="blue.900" px={4} color="white">
+    <Box bg="blue.900" px={{ base: 2, md: 4 }} color="white">
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <Flex align="center">
           <Image
             src="New-Logo.png"
             alt="CS Club Logo"
-            boxSize="50px"
+            boxSize={{ base: '40px', md: '50px' }}
             mr={3}
             objectFit="cover"
           />
-          <Heading>CS Club</Heading>
+          <Heading size={{ base: 'md', md: 'lg' }}>CS Club</Heading>
         </Flex>
         {isLargerThan768 ? (
           <DesktopNav navItems={navItems} />

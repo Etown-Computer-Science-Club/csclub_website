@@ -20,7 +20,7 @@ export default function PastEvents() {
 
   return (
     <>
-      <Heading mb={5}>Previous Events</Heading>
+      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>Previous Events</Heading>
       {previousEvents.map((event, index) => (
         <Event {...event} key={index} />
       ))}

@@ -32,7 +32,7 @@ function App() {
       <Router>
         <Flex direction="column" minHeight="100vh">
           <NavBar />
-          <Box width="100%" padding={10} flex={1} maxW="container.xl" mx="auto">
+          <Box width="100%" padding={{ base: 4, md: 10 }} px={{ base: 4, md: 6 }} flex={1} maxW="container.xl" mx="auto">
             <Routes>
               <Route path="/" element={<AboutUs />} />
               <Route path="/resources" element={<Resources />} />

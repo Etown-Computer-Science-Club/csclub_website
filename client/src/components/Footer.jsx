@@ -7,9 +7,9 @@ import {
 
 function Footer() {
   return (
-    <Box as="footer" textAlign="center" mt={4} mb={4}>
+    <Box as="footer" textAlign="center" mt={{ base: 3, md: 4 }} mb={{ base: 3, md: 4 }}>
       <Divider mb={3} />
-      <Text mb={2}>
+      <Text fontSize={{ base: 'sm', md: 'base' }} mb={2}>
         <strong>
           Contact us:
         </strong>
@@ -18,7 +18,7 @@ function Footer() {
           csclub@etown.edu
         </Link>
       </Text>
-      <Text>
+      <Text fontSize={{ base: 'sm', md: 'base' }}>
         &copy;
         {' '}
         {new Date().getFullYear()}

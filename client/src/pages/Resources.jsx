@@ -4,8 +4,8 @@ import Resource from '../components/Resource';
 function Resources() {
   return (
     <>
-      <Heading mb={5}>Resources</Heading>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems="stretch">
+      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>Resources</Heading>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 10 }} alignItems="stretch">
         {resources.map((resource, index) => (
           <Resource key={index} {...resource} />
         ))}

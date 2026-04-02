@@ -9,10 +9,10 @@ function EventsGoogleCalendar() {
   const calendarId = 'ZXRvd25jc0BnbWFpbC5jb20';
 
   return (
-    <VStack align="stretch" spacing={6}>
+    <VStack align="stretch" spacing={{ base: 4, md: 6 }}>
       <Box>
-        <Heading mb={3}>Events Calendar</Heading>
-        <Text mb={4} fontSize="sm" color="gray.400">
+        <Heading size={{ base: 'lg', md: 'xl' }} mb={3}>Events Calendar</Heading>
+        <Text mb={4} fontSize={{ base: 'sm', md: 'base' }} color="gray.400">
           View all CS Club events in our Google Calendar below
         </Text>
       </Box>
@@ -21,7 +21,7 @@ function EventsGoogleCalendar() {
         as="iframe"
         src={`https://calendar.google.com/calendar/embed?src=${encodeURIComponent(calendarId)}&ctz=America%2FNew_York`}
         width="100%"
-        height="600px"
+        height={{ base: '600px', md: '600px' }}
         frameBorder="0"
         scrolling="no"
         borderRadius="md"
@@ -30,7 +30,7 @@ function EventsGoogleCalendar() {
         }}
       />
 
-      <Text fontSize="sm" color="gray.500" textAlign="center">
+      <Text fontSize={{ base: 'xs', md: 'sm' }} color="gray.500" textAlign="center">
         Calendar may require you to be signed in to your Google account for full functionality.
       </Text>
     </VStack>

@@ -114,7 +114,7 @@ export default function EventsCalendar({ events }) {
         <Button onClick={() => setIndex((i) => i - 1)} isDisabled={index <= 0} size="sm">
           Prev
         </Button>
-        <Text fontSize="lg" fontWeight="semibold">{monthLabel}</Text>
+        <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight="semibold">{monthLabel}</Text>
         <Button
           onClick={() => setIndex((i) => i + 1)}
           isDisabled={index >= months.length - 1}
@@ -124,10 +124,10 @@ export default function EventsCalendar({ events }) {
         </Button>
       </HStack>
 
-      <Box borderWidth={1} borderRadius="md" p={3}>
-        <Grid templateColumns="repeat(7, 1fr)" gap={2}>
+      <Box borderWidth={1} borderRadius="md" p={{ base: 2, md: 3 }} overflowX="auto">
+        <Grid templateColumns="repeat(7, 1fr)" gap={{ base: 1, md: 2 }} minW="320px">
           {weekdayNames.map((d) => (
-            <Box key={d} textAlign="center" fontSize="sm" fontWeight="semibold">
+            <Box key={d} textAlign="center" fontSize={{ base: 'xs', md: 'sm' }} fontWeight="semibold">
               {d}
             </Box>
           ))}
@@ -167,35 +167,35 @@ export default function EventsCalendar({ events }) {
 
             return (
               <Tooltip key={idx} label={tooltipContent} hasArrow placement="top" openDelay={200}>
-                <Box
-                  borderWidth={1}
-                  borderColor={thisMonth ? 'gray.200' : 'transparent'}
-                  borderRadius="md"
-                  p={2}
-                  sx={{ aspectRatio: '1 / 1' }}
-                  display="flex"
-                  flexDirection="column"
-                  alignItems="flex-start"
-                  justifyContent="flex-start"
-                  overflow="hidden"
-                >
-                  <Text fontSize="sm" color={thisMonth ? 'gray.800' : 'gray.400'}>{d.getDate()}</Text>
-                  {evt && (
-                    <>
-                      <Text fontSize="xs" fontWeight="semibold" noOfLines={3} title={evt.name}>
-                        {evt.name}
+              <Box
+                borderWidth={1}
+                borderColor={thisMonth ? 'gray.200' : 'transparent'}
+                borderRadius="md"
+                p={{ base: 1, md: 2 }}
+                sx={{ aspectRatio: '1 / 1' }}
+                display="flex"
+                flexDirection="column"
+                alignItems="flex-start"
+                justifyContent="flex-start"
+                overflow="hidden"
+              >
+                <Text fontSize={{ base: 'xs', md: 'sm' }} color={thisMonth ? 'gray.800' : 'gray.400'}>{d.getDate()}</Text>
+                {evt && (
+                  <>
+                    <Text fontSize={{ base: 'xs', md: 'xs' }} fontWeight="semibold" noOfLines={3} title={evt.name}>
+                      {evt.name}
+                    </Text>
+                    <Text fontSize={{ base: 'xs', md: 'xs' }} color="gray.600">
+                      {timeRange}
+                    </Text>
+                    {evt.location && (
+                      <Text fontSize={{ base: 'xs', md: 'xs' }} color="gray.600" noOfLines={1}>
+                        {evt.location}
                       </Text>
-                      <Text fontSize="xs" color="gray.600">
-                        {timeRange}
-                      </Text>
-                      {evt.location && (
-                        <Text fontSize="xs" color="gray.600" noOfLines={1}>
-                          {evt.location}
-                        </Text>
-                      )}
-                    </>
-                  )}
-                </Box>
+                    )}
+                  </>
+                )}
+              </Box>
               </Tooltip>
             );
           })}
