@@ -9,7 +9,6 @@ const navItems = [
   { title: 'Events', link: '/events' },
   { title: 'Resources', link: '/resources' },
   { title: 'Archived Resources', link: '/resources/archived' },
-  { title: 'Feedback', link: 'https://forms.gle/dsD54bsbjDkfm52F6', external: true },
   { title: 'Fundraising', link: '/fundraising' },
 ];
 

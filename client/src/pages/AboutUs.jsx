@@ -1,9 +1,6 @@
 import {
-  Box, Text, Heading, Table, Tbody, Tr, Th, Td, Link, Icon,
+  Box, Text, Heading, Table, Tbody, Tr, Th, Td, Link,
 } from '@chakra-ui/react';
-import {
-  FaGithub, FaInstagram, FaLinkedin, FaFacebook, FaDiscord, FaGoogleDrive, FaCalendarAlt,
-} from 'react-icons/fa';
 
 function AboutUs() {
   return (
@@ -17,7 +14,7 @@ function AboutUs() {
         </Text>
       </Box>
       <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>2025-2026 Officers</Heading>
-      <Box mb={5} overflowX="auto">
+      <Box mb={3} overflowX="auto">
         <Table variant="simple" fontSize={{ base: 'sm', md: 'base' }}>
           <Tbody>
             <Tr>
@@ -90,39 +87,6 @@ function AboutUs() {
             </Tr>
           </Tbody>
         </Table>
-      </Box>
-      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>Contact Us</Heading>
-      <Box mb={5}>
-        <Text fontSize={{ base: 'sm', md: 'base' }}>
-          Email:
-          {' '}
-          <Link href="mailto:csclub@etown.edu" color="blue.500">
-            csclub@etown.edu
-          </Link>
-        </Text>
-        <Box display="flex" mt={5} gap={{ base: 2, md: 3 }} flexWrap="wrap">
-          <Link href="https://github.com/Etown-Computer-Science-Club" isExternal>
-            <Icon as={FaGithub} boxSize={{ base: 6, md: 8 }} />
-          </Link>
-          <Link href="https://www.instagram.com/etowncsclub" isExternal>
-            <Icon as={FaInstagram} boxSize={{ base: 6, md: 8 }} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/cs-club-etown/" isExternal>
-            <Icon as={FaLinkedin} boxSize={{ base: 6, md: 8 }} />
-          </Link>
-          <Link href="https://www.facebook.com/profile.php?id=61574682497514" isExternal>
-            <Icon as={FaFacebook} boxSize={{ base: 6, md: 8 }} />
-          </Link>
-          <Link href="https://discord.com/invite/2qeFUwWfF8" isExternal>
-            <Icon as={FaDiscord} boxSize={{ base: 6, md: 8 }} />
-          </Link>
-          <Link href="https://drive.google.com/drive/folders/1tmvBG6ZtPZRnaOj8D06ZS8E2D2KQMEZJ?usp=drive_link" isExternal>
-            <Icon as={FaGoogleDrive} boxSize={{ base: 6, md: 8 }} />
-          </Link>
-          <Link href="https://calendar.google.com/calendar/u/3?cid=ZXRvd25jc0BnbWFpbC5jb20" isExternal aria-label="Google Calendar">
-            <Icon as={FaCalendarAlt} boxSize={{ base: 6, md: 8 }} />
-          </Link>
-        </Box>
       </Box>
     </>
   );
