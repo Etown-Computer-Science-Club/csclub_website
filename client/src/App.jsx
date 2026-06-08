@@ -11,8 +11,8 @@ import Footer from './components/Footer';
 import EventsGoogleCalendar from './pages/EventsGoogleCalendar';
 // Old Events component kept for reference/reverting if needed
 // import Events from './pages/Events';
-import PastEvents from './pages/PastEvents';
-import ArchivedResources from './pages/ArchivedResources';
+// import PastEvents from './pages/PastEvents';
+import ArchivedEvents from './pages/ArchivedEvents';
 import Fundraising from './pages/Fundraising';
 
 const theme = extendTheme({
@@ -38,8 +38,7 @@ function App() {
               <Route path="/resources" element={<Resources />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/events" element={<EventsGoogleCalendar />} />
-              <Route path="/events/past" element={<PastEvents />} />
-              <Route path="/resources/archived" element={<ArchivedResources />} />
+              <Route path="/events/archived" element={<ArchivedEvents />} />
               <Route path="/fundraising" element={<Fundraising />} />
             </Routes>
           </Box>

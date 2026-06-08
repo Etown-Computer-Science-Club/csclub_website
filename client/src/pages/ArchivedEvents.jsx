@@ -15,14 +15,14 @@ const events = rawEvents.map((evt) => ({
   endDate: date(evt.endDate),
 }));
 
-export default function ArchivedResources() {
+export default function ArchivedEvents() {
   const currentDate = utcToZonedTime(new Date(), 'America/New_York');
   const previousEvents = events.filter((event) => event.endDate < currentDate);
   previousEvents.sort((a, b) => b.startDate - a.startDate);
 
   return (
     <>
-      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>Archived Resources</Heading>
+      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>Archived Events</Heading>
       <Box mb={8} p={{ base: 3, md: 4 }} borderRadius="md" bg="gray.700">
         <Text fontSize={{ base: 'sm', md: 'base' }} mb={2}>
           Access resources from our past events and meetings:

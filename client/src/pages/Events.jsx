@@ -5,6 +5,12 @@ import Event from '../components/Event';
 import EventsCalendar from '../components/EventsCalendar';
 import rawEvents from '../components/eventData.json';
 
+// DEPRECATED: This component is no longer used,
+// but is kept for reference and potential future
+// use if we want to revert back to the old events
+// page design. The new events page uses a Google
+// Calendar embed instead of manually listing events here.
+
 function date(dateString) {
   return zonedTimeToUtc(dateString, 'America/New_York');
 }

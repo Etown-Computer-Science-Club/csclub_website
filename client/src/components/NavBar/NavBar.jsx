@@ -8,7 +8,6 @@ const navItems = [
   { title: 'About Us', link: '/about' },
   { title: 'Events', link: '/events' },
   { title: 'Resources', link: '/resources' },
-  { title: 'Archived Resources', link: '/resources/archived' },
   { title: 'Fundraising', link: '/fundraising' },
 ];
 
