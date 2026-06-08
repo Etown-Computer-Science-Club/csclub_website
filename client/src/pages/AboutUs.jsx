@@ -1,24 +1,21 @@
 import {
-  Box, Text, Heading, Table, Tbody, Tr, Th, Td, Link, Icon,
+  Box, Text, Heading, Table, Tbody, Tr, Th, Td, Link,
 } from '@chakra-ui/react';
-import {
-  FaGithub, FaInstagram, FaLinkedin, FaFacebook, FaDiscord, FaGoogleDrive, FaCalendarAlt,
-} from 'react-icons/fa';
 
 function AboutUs() {
   return (
     <>
-      <Heading mb={5}>About Us</Heading>
+      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>About Us</Heading>
       <Box mb={5}>
-        <Text>
+        <Text fontSize={{ base: 'sm', md: 'base' }}>
           We are a club dedicated to computer science. We aim to provide an engaging, supportive
           environment where students can enhance their knowledge and skills in various aspects of
           computer science. We plan to attend hackathons, host workshops, and complete projects.
         </Text>
       </Box>
-      <Heading mb={5}>2025-2026 Officers</Heading>
-      <Box mb={5}>
-        <Table variant="simple">
+      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>2025-2026 Officers</Heading>
+      <Box mb={3} overflowX="auto">
+        <Table variant="simple" fontSize={{ base: 'sm', md: 'base' }}>
           <Tbody>
             <Tr>
               <Th>Position</Th>
@@ -90,39 +87,6 @@ function AboutUs() {
             </Tr>
           </Tbody>
         </Table>
-      </Box>
-      <Heading mb={5}>Contact Us</Heading>
-      <Box mb={5}>
-        <Text>
-          Email:
-          {' '}
-          <Link href="mailto:csclub@etown.edu" color="blue.500">
-            csclub@etown.edu
-          </Link>
-        </Text>
-        <Box display="flex" mt={5}>
-          <Link href="https://github.com/Etown-Computer-Science-Club" isExternal mr={3}>
-            <Icon as={FaGithub} boxSize={8} />
-          </Link>
-          <Link href="https://www.instagram.com/etowncsclub" isExternal mr={3}>
-            <Icon as={FaInstagram} boxSize={8} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/cs-club-etown/" isExternal mr={3}>
-            <Icon as={FaLinkedin} boxSize={8} />
-          </Link>
-          <Link href="https://www.facebook.com/profile.php?id=61574682497514" isExternal mr={3}>
-            <Icon as={FaFacebook} boxSize={8} />
-          </Link>
-          <Link href="https://discord.com/invite/2qeFUwWfF8" isExternal mr={3}>
-            <Icon as={FaDiscord} boxSize={8} />
-          </Link>
-          <Link href="https://drive.google.com/drive/folders/1tmvBG6ZtPZRnaOj8D06ZS8E2D2KQMEZJ?usp=drive_link" isExternal mr={3}>
-            <Icon as={FaGoogleDrive} boxSize={8} />
-          </Link>
-          <Link href="https://calendar.google.com/calendar/u/3?cid=ZXRvd25jc0BnbWFpbC5jb20" isExternal mr={3} aria-label="Google Calendar">
-            <Icon as={FaCalendarAlt} boxSize={8} />
-          </Link>
-        </Box>
       </Box>
     </>
   );

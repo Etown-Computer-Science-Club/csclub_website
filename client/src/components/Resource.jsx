@@ -28,13 +28,13 @@ function Resource({
         transition="background 0.3s"
         userSelect="none"
       >
-        <Flex direction={{ base: 'column', md: 'row' }} align="center">
+        <Flex direction={{ base: 'column', md: 'row' }} align={{ base: 'flex-start', md: 'center' }}>
           <Image src={image} alt={title} boxSize="100px" mr={5} objectFit="contain" />
-          <Box>
+          <Box width="100%" textAlign={{ base: 'left', md: 'left' }}>
             <Heading size="md" mb={3}>
               {title}
             </Heading>
-            <UnorderedList stylePosition="inside">
+            <UnorderedList stylePosition="inside" textAlign="left">
               {description.map((item, index) => (
                 <ListItem key={index}>{item}</ListItem>
               ))}

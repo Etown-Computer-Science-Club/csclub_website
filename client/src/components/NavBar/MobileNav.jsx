@@ -30,15 +30,15 @@ function MobileNav({ navItems }) {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerBody>
-              <VStack p={0}>
+            <DrawerBody py={4}>
+              <VStack spacing={0} align="stretch" p={0}>
                 {navItems.map((item) => (
                   item.external ? (
-                    <Link href={item.link} mr={5} key={item.link} isExternal onClick={onClose}>
+                    <Link href={item.link} key={item.link} isExternal onClick={onClose} py={4} px={3} fontSize={{ base: 'md', md: 'base' }} display="block" _hover={{ bg: 'gray.700' }} borderRadius="md">
                       {item.title}
                     </Link>
                   ) : (
-                    <Link as={RouterLink} to={item.link} mr={5} key={item.link} onClick={onClose}>
+                    <Link as={RouterLink} to={item.link} key={item.link} onClick={onClose} py={4} px={3} fontSize={{ base: 'md', md: 'base' }} display="block" _hover={{ bg: 'gray.700' }} borderRadius="md">
                       {item.title}
                     </Link>
                   )

@@ -4,8 +4,8 @@ import Resource from '../components/Resource';
 function Fundraising() {
   return (
     <>
-      <Heading mb={5}>Fundraising</Heading>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems="stretch">
+      <Heading size={{ base: 'lg', md: 'xl' }} mb={5}>Fundraising</Heading>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 10 }} alignItems="stretch">
         {fundraisingItems.map((item, index) => (
           <Resource key={index} {...item} />
         ))}
@@ -19,18 +19,23 @@ export default Fundraising;
 const fundraisingItems = [
   {
     title: 'Student Charge Clothing Form',
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdXS9dQWAxydGCyRWJuYPorNUJTqQs_vOVCR0N7YQgdx8A9mA/viewform',
+    link: 'https://forms.gle/FaTXdbPvJTex6pF18',
     image: '/shirt.png',
     description: ['Trucker-Hat Style Hats',
       'Bella Canvas Shirts',
       'Fleece Pullover Hooded Sweatshirts'],
   },
   {
-    title: 'Print Services Form',
+    title: 'Student Charge Customizable (7 Logos) Print Services Form',
     link: 'https://forms.gle/tXWyqkmDE2X2iRNEA',
     image: '/mug.jpg',
-    description: ['Custom Pillows',
-      'Custom Mugs',
-      'Custom Shirts'],
+    description: ['Mugs (11 or 15 oz)',
+      'Shirts (White, Gray, Light Blue)',
+      'Mousepads (9" by 8")',
+      'Ornaments (Rectangle or Snowflake)',
+      'Skinny White Tumbler (20 oz)',
+      'Canvas Pillow (16" by 16")',
+      'Dog Bandana and Collar',
+    ],
   },
 ];

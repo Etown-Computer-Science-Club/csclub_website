@@ -13,14 +13,14 @@ function Event({
     : `${format(startDate, 'MM/dd/yyyy, h:mm a')} - ${format(endDate, 'MM/dd/yyyy, h:mm a')}`;
 
   return (
-    <Box mb={5} alignItems="start">
+    <Box mb={{ base: 4, md: 5 }} alignItems="start">
       <Heading size="md" mb={2}>
         {name}
       </Heading>
-      <Text fontSize="sm" color="gray.500" mb={2}>
+      <Text fontSize={{ base: 'xs', md: 'sm' }} color="gray.500" mb={2}>
         {dateDisplay}
       </Text>
-      <Text mb={2}>{description}</Text>
+      <Text fontSize={{ base: 'sm', md: 'base' }} mb={2}>{description}</Text>
       {location && (
         <Text fontSize="sm" mb={2}>
           Location:
