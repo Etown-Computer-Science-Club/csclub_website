@@ -62,6 +62,14 @@ function AboutUs() {
               </Td>
             </Tr>
             <Tr>
+              <Td>Secretary</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/natemarshall5/" isExternal>
+                  Nate Marshall
+                </Link>
+              </Td>
+            </Tr>
+            <Tr>
               <Td>Faculty Advisor</Td>
               <Td>
                 <Link href="https://www.linkedin.com/in/peilongli/" isExternal>
