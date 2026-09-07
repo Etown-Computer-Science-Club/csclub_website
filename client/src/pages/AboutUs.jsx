@@ -24,7 +24,7 @@ function AboutUs() {
             <Tr>
               <Td>President</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/kana-ueda-0b0783289/" isExternal>
+                <Link href="https://www.linkedin.com/in/kanade-ueda/" isExternal>
                   Kylie Ueda
                 </Link>
               </Td>
@@ -33,7 +33,7 @@ function AboutUs() {
               <Td>Vice President</Td>
               <Td>
                 <Link href="https://www.linkedin.com/in/isabella-la-face-76b148300/" isExternal>
-                  Isabella la Face
+                  Isabella La Face
                 </Link>
               </Td>
             </Tr>
