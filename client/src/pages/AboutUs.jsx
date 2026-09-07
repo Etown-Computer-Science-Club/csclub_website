@@ -24,48 +24,48 @@ function AboutUs() {
             <Tr>
               <Td>President</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/mattsmith46/" isExternal>
-                  Matthew Smith
+                <Link href="https://www.linkedin.com/in/kanade-ueda/" isExternal>
+                  Kylie Ueda
                 </Link>
               </Td>
             </Tr>
             <Tr>
               <Td>Vice President</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/james-m-hutchins/" isExternal>
-                  James Hutchins
+                <Link href="https://www.linkedin.com/in/isabella-la-face-76b148300/" isExternal>
+                  Isabella La Face
                 </Link>
               </Td>
             </Tr>
             <Tr>
               <Td>Treasurer</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/isabella-la-face-76b148300/" isExternal>
-                  Isabella la Face
+                <Link href="https://www.linkedin.com/in/brian-duva-software-dev/" isExternal>
+                  Brian Duva
                 </Link>
               </Td>
             </Tr>
             <Tr>
-              <Td>Social Media Lead</Td>
+              <Td>Social Media Chair</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/kanade-ueda-0b0783289/" isExternal>
-                  Kylie Ueda
+                <Link href="https://www.linkedin.com/in/kaiden-miller/" isExternal>
+                  Kaiden Miller
+                </Link>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>Outreach Lead</Td>
+              <Td>
+                <Link href="https://www.linkedin.com/in/aaronfrist/" isExternal>
+                  Aaron Frist
                 </Link>
               </Td>
             </Tr>
             <Tr>
               <Td>Secretary</Td>
               <Td>
-                <Link href="https://www.linkedin.com/in/owyang137/" isExternal>
-                  Owen Yang
-                </Link>
-              </Td>
-            </Tr>
-            <Tr>
-              <Td>Tech Lead</Td>
-              <Td>
-                <Link href="https://www.linkedin.com/in/brian-duva-software-dev/" isExternal>
-                  Brian Duva
+                <Link href="https://www.linkedin.com/in/natemarshall5/" isExternal>
+                  Nate Marshall
                 </Link>
               </Td>
             </Tr>
